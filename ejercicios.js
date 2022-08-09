@@ -47,3 +47,18 @@ const separateNames = (names) => {
 const [nombresCortos, nombresLargos] = separateNames(nombres)
 console.log("nombres cortos", nombresCortos)
 console.log("nombres largos", nombresLargos)
+
+// Ejercicio 2
+
+// Hacer una funcion que se llame transformarNombres reciba como parametro un array de nombres y regresar un objeto de objetos que contenga el nombre, el length del nombre y si es mayor a 4 o no
+// Input: ["Ale", "Mariana", "Adrian"]...
+// Output:
+// {
+// 	0: {
+// 		name: "Ale", -> string
+// 		length: 3, -> numero
+// 		isGreaterThanFour: true -> booleano
+// 	}
+// }
+
+// reduce -> cambiar datos
