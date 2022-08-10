@@ -95,6 +95,8 @@ const transformarNombres = (names) => {
   // 2 -> valor inicial del accumulador
 
   return names.reduce((accumulador, valorActual, indice) => {
+    // La acumulacioon de lo que estas retornan
+
     return {
       ...accumulador, // spread operator
       [indice]: {
