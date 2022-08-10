@@ -4,7 +4,7 @@
   "description": "Mi primer proyecto de node",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js", 
+    "start": "node index.js",
     "test": "node index.js",
     "dev": "node ejercicioreduce.js"
   },
@@ -12,7 +12,14 @@
     "type": "git",
     "url": "git+https://github.com/alepaez-dev/BackendNode20G.git"
   },
+  "keywords": [
+    "node",
+    "kodemia"
+  ],
   "author": "al2658451@gmail.com",
   "license": "ISC",
-  "homepage": "https://github.com/alepaez-dev/BackendNode20G#readme"
+  "homepage": "https://github.com/alepaez-dev/BackendNode20G#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
 }
