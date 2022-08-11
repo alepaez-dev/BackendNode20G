@@ -13,3 +13,4 @@ const printName = (nombre) => {
 }
 
 printName(nombre)
+console.log('Que onda')
