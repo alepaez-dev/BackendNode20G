@@ -53,25 +53,43 @@ const fs = require("fs")
  * 3 - En cada ciclo, voy a eliminarlo
  */
 
-const path = "dir1"
-fs.readdir(path, "utf-8", (err, files) => {
-  if(err) throw err
+// const path = "dir1"
+// fs.readdir(path, "utf-8", (err, files) => {
+//   if(err) throw err
 
-  // Validar que cuanto no tenga archivos me imprima que no hay archivos.
-  if(files.length === 0) {
-    console.log("No hay archivos")
-    return
-  }
-  // La callback es una funcion
-  // A las funciones le podemos en los paramet=ros
+//   // Validar que cuanto no tenga archivos me imprima que no hay archivos.
+//   if(files.length === 0) {
+//     console.log("No hay archivos")
+//     return
+//   }
+//   // La callback es una funcion
+//   // A las funciones le podemos en los paramet=ros
 
-  // Continuar con que si tenemos archivos
-  files.forEach(file => {
-    fs.unlink(`${path}/${file}`, (err) => {
-      if(err) throw err
+//   // Continuar con que si tenemos archivos
+//   files.forEach(file => {
+//     fs.unlink(`${path}/${file}`, (err) => {
+//       if(err) throw err
 
-      console.log(`La eliminacion del ${file} fue exitosa`)
+//       console.log(`La eliminacion del ${file} fue exitosa`)
+//     })
+//   })
+
+// })
+
+
+const directorio = "directorio1"
+fs.readdir(directorio, "utf8", (err,files)=>{
+    if(err) throw err
+    if(files.length===0){
+        console.log("No hay algo que se deba eliminar")
+    }
+    files.forEach(item=>{
+        fs.unlink(`directorio1/${item}`,(err)=>{
+            if(!err){
+                console.log("Tu archivo fue eliminado")
+            }else{
+                console.log(err)
+            }
+        })
     })
-  })
-
 })
