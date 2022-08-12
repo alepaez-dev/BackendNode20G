@@ -7,6 +7,9 @@
 
 /**
  * 1 - Con callbacks
+ * 2 - Promises
+ * 
+ * Promificacion
  */
 
 const koder = {
@@ -16,17 +19,17 @@ const koder = {
     seInscribio: false,
 };
 
-const darInformes = (koderADarInformes, callback) => {
+const darInformes = (koderAInformar, callback) => {
     let error = null;
     setTimeout(() => {
         // Voy a darle informes al koder
-        koderADarInformes.seDieronInformes = true;
+        koderAInformar.seDieronInformes = true;
 
         // Si el koder no fue informado, lanzar un error
-        if (!koderADarInformes.seDieronInformes) {
+        if (!koderAInformar.seDieronInformes) {
             error = "No ha sido informado";
         }
-        callback(error, koderADarInformes);
+        callback(error, koderAInformar);
     }, 3000);
 };
 
@@ -75,7 +78,8 @@ const inscribir = (koderAInscribir, callback) => {
  * Asincronidad -> cuando se hacian varias cosas al mismo tiempo
  */
 
-darInformes({ ...koder }, (error, koderConInformes) => {
+
+darInformes({ ...koder }, (error, koderInformado) => {
     if (error) {
         console.log("error:", error);
         return; // Salte
