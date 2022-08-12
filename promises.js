@@ -5,7 +5,7 @@
  * Reglas ->
  * Tienen 3 estados
  * 1 - Pending -> 5s, 5 segundos pendiente
- * 2 - Rejected -> si ocurrio un error -> si fuera rechaza
+ * 2 - Rejected -> si ocurrio un error -> si fuera rechazada
  * 3 - Accepted -> si se resolvio -> si fue aceptada
  *
  * Al momento de hacer la promesa, declaracion de la promesa
@@ -96,26 +96,32 @@ koderInformado
             .then((koderEntrevistado) => {
                 console.log("koderEntrevistado", koderEntrevistado);
 
+                // Pagar
                 pagar({ ...koderEntrevistado })
                     .then((koderPagado) => {
                         console.log("El koder fue pagado", koderPagado);
 
+                        // Inscribir
                         inscribir({ ...koderPagado })
                             .then((koderInscrito) => {
                                 console.log("Exito", koderInscrito);
                             })
+                            // Error de inscribir
                             .catch((error) => {
                                 console.log("error", error);
                             });
                     })
+                    // Error de pagar
                     .catch((error) => {
                         console.log("Error", error);
                     });
             })
+            // Error de entrevistar
             .catch((error) => {
                 console.log("error", error);
             });
     })
+    // Error de informar
     .catch((error) => {
         console.log("error", error);
     });
