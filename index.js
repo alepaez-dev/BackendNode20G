@@ -26,28 +26,35 @@ const server = http.createServer((request, response) => {
   
   // Deestructure
   const { url, method } = request
-  
-  console.log("method", method)
-  console.log("url", url)
-  // GET -> localhost:8080
-  // Bienvenido estas en el get, estas leyendo
-  if(method === "GET" && url === "/") {
-    response.write("Bienvenido estas en el get, en home estas leyendo")
-  } else if(method === "POST" && url === "/") {
-    response.write("Bienvenido estas en el POST en la ruta /")
-  } else if (method === "PATCH" && url === "/") {
-    response.write("Bienvenido estas en el PATCH en la ruta /")
-  } else if (method === "PUT" && url === "/") {
-    response.write("Bienvenido estas en el PUT en la ruta /")
-  } else if (method === "DELETE" && url === "/") {
-    response.write("Bienvenido estas en el DELETE en la ruta /")
-  } else if(method === "GET" && url === "/profile") {
-    response.write("Bienvenido estas en el GET en la ruta /profile")
-  }
-  else {
-    response.write("Esta ruta no existe")
+
+
+  // 1 Nivel -> Metodo
+  // 2 Nivel -> Ruta
+  // Estructura de datos
+  const endpoints = {
+    "GET": {
+      "/": "Bienvenido estas en GET en HOME",
+      "/profile": "Bienvenido estas en GET en el profile",
+    },
+    "POST": {
+      "/": "Bienvenido estas en POST en HOME",
+      "/user": "Bienvenido estas en POST en el user"
+    },
+    "PUT":  {
+      "/": "Bienvenido estas en PUT en HOME",
+      "/profile": "Bienvenido estas en PUT en el profile"
+    },
+    "PATCH": {
+      "/": "Bienvenido estas en PATCH en HOME",
+      "/profile": "Bienvenido estas en PATCH en el profile"
+    },
+    "DELETE":{
+      "/": "Bienvenido estas en DELETe en HOME",
+      "/profile": "Bienvenido estas en DELETe en el profile"
+    },
   }
 
+  response.write(endpoints[method][url])
   response.end() // ya se finalizo
 
   // POST -> localhost:8080
