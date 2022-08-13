@@ -86,6 +86,7 @@ const inscribir = (koderAInscribir) => {
     });
 };
 
+// Promise hell
 const koderInformado = darInformes({ ...koder });
 koderInformado
     .then((koderInformado) => {

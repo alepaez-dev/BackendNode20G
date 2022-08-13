@@ -5,9 +5,12 @@
  * Async -> Cuando vamos a hacer una funcion asyncrona
  * Await -> Va a ESPERAR una promesas. -> 5 segundos
  * 
+ * 
  * Reglas:
+ * Si hacemos una funcion asincrona, si o si nos va a retornar una promesa
  * Async va en la declaracion de la funcion, se esta declarando como asincrona
  * Await va dentro de esa funcion que se declaro como asincrona
+ * Siempre cuando se usa async await, usen try catch
  * 
  * No puedo usar await sin el async.
  * 
@@ -101,13 +104,24 @@ const inscribir = (koderAInscribir) => {
 
 
 // Async - Await
-const recibiendoInformes = async () => {
-  const koderInformar = await darInformes({...koder})
+const procesoKoderKodemia = async () => {
+    try{
+        const koderInformardo = await darInformes({...koder})
+        const koderEntrevistado = await entrevistar({...koderInformardo})
+        const koderPagado = await pagar({...koderEntrevistado})
+        const koderInscrito = await inscribir({...koderPagado})
+        console.log("koderInscrito adentro de funcion", koderInscrito)
 
-  // Awaits
-  // Se esta esperando
-  console.log("koderInformar", koderInformar)
-  
+        return koderInscrito
+    } catch(err) {
+        console.log("err", err)
+    }
 }
 
-recibiendoInformes()
+procesoKoderKodemia()
+.then((koderInscrito) => {
+    console.log("koder Inscrito en el retorno en el then", koderInscrito)
+})
+.catch((err) => {
+    console.log("Paso un error", err)
+})
