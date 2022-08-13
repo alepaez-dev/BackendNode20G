@@ -125,3 +125,16 @@ procesoKoderKodemia()
 .catch((err) => {
     console.log("Paso un error", err)
 })
+
+/**
+ * FS
+ * Asincronidad
+ * Callbacks
+ * Promises
+ * Async Await
+ * HTTP
+ * 
+ * -> Prender un servidor
+ * -> Hacer una API
+ * 
+ */
