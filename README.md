@@ -23,11 +23,17 @@ Moduolo Backend con node para la gen20, empieza 5 Ago / 22
 
 ## Reto
 GET /posts
+
 GET /posts/:id
+
 POST /posts
+
 DELETE /post (protegido, solo usuarios con token pueden hacer esto)
+
 PATCH /post/:id (protegido)
+
 POST /users -> Creacion de un usuario -> Signup
+
 POST /auth/login -> Login
 
 Los requisitos son:
