@@ -51,3 +51,10 @@ Extras:
 
 ### Ejemplo de como conectar: 
 https://github.com/alepaez-dev/frontendfinal20Js
+
+### Equipos REPOS
+- Equipo 1
+- Equipo 1
+- Equipo 3
+https://github.com/deathmarcus/Devto-challenge-backend
+- Equipo 4
