@@ -52,6 +52,8 @@ Extras:
 ### Ejemplo de como conectar: 
 https://github.com/alepaez-dev/frontendfinal20Js
 
+### Fecha de entrega: Martes 3 Aug :)))))))
+
 ### Equipos REPOS
 - Equipo 1
 https://github.com/AdrianMedellinG/devtoAPI
