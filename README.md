@@ -54,6 +54,7 @@ https://github.com/alepaez-dev/frontendfinal20Js
 
 ### Equipos REPOS
 - Equipo 1
+https://github.com/AdrianMedellinG/devtoAPI
 - Equipo 2 
 https://github.com/sofysha91/devto-backend
 - Equipo 3
