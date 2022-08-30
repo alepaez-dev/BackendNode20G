@@ -52,7 +52,7 @@ Extras:
 ### Ejemplo de como conectar: 
 https://github.com/alepaez-dev/frontendfinal20Js
 
-### Fecha de entrega: Martes 30 Aug :)))))))
+### Fecha de entrega: Martes 30 Aug 8:00pm :)))))))
 
 ### Equipos REPOS
 - Equipo 1
